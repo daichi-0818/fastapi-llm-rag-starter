@@ -1,0 +1,46 @@
+[project]
+name = "fastapi-llm-rag-starter"
+version = "0.1.0"
+description = "Production-ready FastAPI + RAG starter with Claude / Gemini provider abstraction"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Daichi Zaha" }]
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "chromadb>=0.5",
+    "httpx>=0.27",
+    "anthropic>=0.39",
+    "google-genai>=0.3",
+    "python-multipart>=0.0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.7",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]
+# B008: FastAPI uses Depends() in defaults idiomatically.
+ignore = ["E501", "B008"]

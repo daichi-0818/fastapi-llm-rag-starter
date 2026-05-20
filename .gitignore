@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+fastapi_llm_rag_starter.egg-info/
+.venv/
+venv/
+.env
+.chroma/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+*.log
+build/
+dist/
