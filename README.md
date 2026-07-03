@@ -1,5 +1,7 @@
 # fastapi-llm-rag-starter
 
+[![CI](https://github.com/daichi-0818/fastapi-llm-rag-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/daichi-0818/fastapi-llm-rag-starter/actions/workflows/ci.yml)
+
 Production-ready FastAPI + RAG starter with pluggable LLM providers (Anthropic Claude / Google Gemini), ChromaDB vector store, and a clean test setup that runs without API keys.
 
 > **Why this exists**
